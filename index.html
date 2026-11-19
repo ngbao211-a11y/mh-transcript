@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH-King Store • Transcript Vault</title>
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <style>
+        :root {
+            --bg: #07080c;
+            --surface: #101218;
+            --surface-sub: #151822;
+            --border: rgba(230, 189, 104, 0.22);
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --gold: #e6bd68;
+            --gold-bright: #f6d992;
+            --green: #22c55e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            max-width: 880px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            object-fit: cover;
+        }
+        .brand-name {
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.01em;
+        }
+        .pill {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 6px;
+            background: rgba(230, 189, 104, 0.12);
+            border: 1px solid var(--border);
+            color: var(--gold-bright);
+        }
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+        .main {
+            width: 100%;
+            max-width: 720px;
+            padding: 40px 18px 56px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .hero {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .hero-cover {
+            width: 100%;
+            height: 170px;
+            background: #090a0f url('/assets/vault-banner.png') center/cover no-repeat;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .hero-body {
+            padding: 0 28px 28px;
+            margin-top: -38px;
+        }
+        .hero-avatar {
+            width: 76px;
+            height: 76px;
+            border-radius: 18px;
+            border: 3px solid var(--surface);
+            outline: 1px solid var(--border);
+            background: #060609;
+            object-fit: cover;
+            margin-bottom: 14px;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+        .lead {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+        .thanks-preview {
+            width: 100%;
+            border-radius: 14px;
+            border: 1px solid rgba(230, 189, 104, 0.25);
+            display: block;
+            margin-top: 12px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            padding: 16px;
+        }
+        .card-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold-bright);
+            margin-bottom: 4px;
+        }
+        .card-desc {
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--muted);
+        }
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        @media (max-width: 640px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero-body { padding: 0 18px 22px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="/">
+            <img src="/assets/server-icon.png" alt="MH-King Store">
+            <span class="brand-name">MH-KING STORE</span>
+            <span class="pill">Transcript Vault</span>
+        </a>
+        <div class="status">
+            <span class="dot"></span>
+            <span>Vault Online</span>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-cover"></div>
+            <div class="hero-body">
+                <img class="hero-avatar" src="/assets/server-icon.png" alt="MH-King Store Avatar">
+                <h1>Kho Lưu Trữ Bản Ghi Ticket Bảo Mật</h1>
+                <p class="lead">
+                    Mỗi bản ghi giao dịch tại <strong>MH-King Store</strong> được mã hóa AES-256-CBC và bảo vệ bằng mã 6 ký tự ngẫu nhiên. Vui lòng mở đúng đường dẫn riêng mà Bot gửi qua DM hoặc kênh Ticket.
+                </p>
+                <img class="thanks-preview" src="/assets/thanks-banner.png" alt="Cảm ơn quý khách MH-King Store">
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <div class="card-title">Mã Hóa AES-256</div>
+                <div class="card-desc">Dữ liệu lịch sử trò chuyện được giải mã trực tiếp trên trình duyệt, không lưu khóa trên máy chủ.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Mã Bảo Mật 6 Ký Tự</div>
+                <div class="card-desc">Bot cấp ngẫu nhiên 6 ký tự in hoa + số cho từng ticket, dễ dán và kiểm tra mọi lúc.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Tốc Độ Vercel Edge</div>
+                <div class="card-desc">Phản hồi mượt mà, nhẹ máy và tương thích tốt cả trên điện thoại lẫn máy tính.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>© 2026 MH-King Store • Minecraft Edition • mh-transcript.vercel.app</footer>
+</body>
+</html>
